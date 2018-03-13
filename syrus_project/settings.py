@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'syrus_data',
         'USER': 'root',
         'PASSWORD': 'jela118759',
-        'HOST': 'localhost',
+        'HOST': 'desing-db.cmfuxwhkaj59.us-west-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
