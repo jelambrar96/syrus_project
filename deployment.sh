@@ -1,4 +1,4 @@
 #!bin/sh
-cd syrus_project
-git pull origin master
+cd /var/www/syrus_project
+sudo git pull origin master
 
