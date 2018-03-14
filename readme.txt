@@ -8,3 +8,6 @@ Juan De La Hoz
 Jorge Lambrano 
 
 Diseno Electronico 2018
+
+Universidad del Norte
+
