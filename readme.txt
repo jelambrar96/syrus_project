@@ -1,3 +1,10 @@
-hola
+Hello 
+this is readme file 
 
-Este es el proyecto de Diseño electrónico
+Authors 
+Jorge Aguilar
+Karim Dasuki
+Juan De La Hoz
+Jorge Lambrano 
+
+Diseno Electronico 2018
