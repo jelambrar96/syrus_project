@@ -13,6 +13,7 @@ import sys
 from django.core.wsgi import get_wsgi_application
 
 sys.path.append('/var/www/syrus_project')
+sys.path.append('/var/www/syrus_project/syrus_project')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "syrus_project.settings")
 
