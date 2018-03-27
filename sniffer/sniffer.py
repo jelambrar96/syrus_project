@@ -62,10 +62,6 @@ def main():
                     other_str =  str(data)
                     #se limpia la cadena
                     info = other_str[2:len(other_str)- 1]
-                    #print('final data is ' + final_data)
-
-                    #info = str(data).replace('b\'','')#[2:]
-                    #print(DATA_TAB_3 + info)
 
                     if data:
 
@@ -73,13 +69,8 @@ def main():
                             itIs, EventDef, datetime, lat, lon, vel, id_syrus = get_message(info)
                         except ValueError:
                             pass
-                            #print(DATA_TAB_3 + "Invalid Format...\n")
 
                         if itIs == 1:
-                            #print(DATA_TAB_3 + "Latitud es "+str(lat)+"  Longitud "+str(lon) )
-                            #print(DATA_TAB_3 + "la hora es "+ str(Hour)+":"+str(Minutes)+":"+str(Seconds))
-                            #print(DATA_TAB_3 + "La fecha es "+str(Day)+"/"+str(Month)+"/"+str(Year))
-                            #print(DATA_TAB_3 + "la velocidad es "+str(vel))
                             db(lat, lon, id_syrus, datetime, vel)
 
 #.................................................................
@@ -88,11 +79,6 @@ def main():
 def ethernet_frame(data):
     dest_mac, src_mac, proto = struct.unpack('! 6s 6s H', data[:14])
     return socket.htons(proto), data[14:]
-
-#.................................................................
-
-#def print_frame():
-
 
 #.................................................................
 
@@ -115,8 +101,6 @@ def upd_segment(data):
 
 def get_message(m):
     if m[0:4] == ">REV":
-        #print("Mensaje recibido: " + m )
-        #print("Procesando...")
         # Confirmation
         itIs = 1
         # Event
@@ -128,7 +112,6 @@ def get_message(m):
         #print (id_syrus)
 
         # Time
-        #secn, Year, Month, Day, Hour, Minutes, Seconds = getTime(int(m[6:10]), int(m[10]), int(m[11:16]))
         ts_epoch = get_seconds(int(m[6:10]), int(m[10]), int(m[11:16]))
         my_datetime = datetime.datetime.fromtimestamp(ts_epoch).strftime('%Y-%m-%d %H:%M:%S')
 
@@ -161,21 +144,6 @@ def get_seconds(wks, days, scnd):
 
 #-------------------------------------------------------------------------
 
-#def getTime(wks, days, scnd):
-#    seco = wks * 7 * 24 * 60 * 60 + (days + 3657) * 24 * 60 * 60 + scnd
-#    # + 5 * 60 * 60
-#    t = time.localtime(seco)
-#    posmonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
-#    Year = t.tm_year
-#    Month = posmonths[t.tm_mon - 1]
-#    Day = t.tm_mday
-#    Hour = t.tm_hour
-#    Minutes = t.tm_min
-#    Seconds = t.tm_sec
-#    return seco, Year, Month, Day, Hour, Minutes, Seconds
-#.................................................................
-
-#def db(datetime,latitude,longitud,Velocidad,id_syrus):
 def db(latitude, longitude, id_syrus, datetime, velocity):
     try:
         with connection.cursor() as cursor:
