@@ -62,10 +62,6 @@ def main():
                     other_str =  str(data)
                     #se limpia la cadena
                     info = other_str[2:len(other_str)- 1]
-                    #print('final data is ' + final_data)
-
-                    #info = str(data).replace('b\'','')#[2:]
-                    #print(DATA_TAB_3 + info)
 
                     if data:
 
@@ -73,13 +69,8 @@ def main():
                             itIs, EventDef, datetime, lat, lon, vel, id_syrus = get_message(info)
                         except ValueError:
                             pass
-                            #print(DATA_TAB_3 + "Invalid Format...\n")
 
                         if itIs == 1:
-                            #print(DATA_TAB_3 + "Latitud es "+str(lat)+"  Longitud "+str(lon) )
-                            #print(DATA_TAB_3 + "la hora es "+ str(Hour)+":"+str(Minutes)+":"+str(Seconds))
-                            #print(DATA_TAB_3 + "La fecha es "+str(Day)+"/"+str(Month)+"/"+str(Year))
-                            #print(DATA_TAB_3 + "la velocidad es "+str(vel))
                             db(lat, lon, id_syrus, datetime, vel)
 
 #.................................................................
