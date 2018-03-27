@@ -146,21 +146,6 @@ def get_seconds(wks, days, scnd):
 
 #-------------------------------------------------------------------------
 
-#def getTime(wks, days, scnd):
-#    seco = wks * 7 * 24 * 60 * 60 + (days + 3657) * 24 * 60 * 60 + scnd
-#    # + 5 * 60 * 60
-#    t = time.localtime(seco)
-#    posmonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
-#    Year = t.tm_year
-#    Month = posmonths[t.tm_mon - 1]
-#    Day = t.tm_mday
-#    Hour = t.tm_hour
-#    Minutes = t.tm_min
-#    Seconds = t.tm_sec
-#    return seco, Year, Month, Day, Hour, Minutes, Seconds
-#.................................................................
-
-#def db(datetime,latitude,longitud,Velocidad,id_syrus):
 def db(latitude, longitude, id_syrus, datetime, velocity):
     try:
         with connection.cursor() as cursor:
