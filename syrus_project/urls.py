@@ -24,5 +24,5 @@ urlpatterns = [
 """
 urlpatterns = [
     url(r'^admin/', admin.site.urls), 
-    utl(r'^hola/$',hola), 
+    utl(r'^hola/',hola), 
 ]
