@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hola/$', Hola),
     url(r'^datetime/$', Datetime),
+    url(r'^datetime/more/(\d{1,2})$', Hours_before)
 ]
