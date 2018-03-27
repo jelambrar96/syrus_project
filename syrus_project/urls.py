@@ -16,13 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
-from syrus_project.views import hola 
+from syrus_project.views import Hola, Datetime
 """
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 """
 urlpatterns = [
-    url(r'^admin/', admin.site.urls), 
-    url(r'^hola/$',hola), 
+    url(r'^admin/', admin.site.urls),
+    url(r'^hola/$', Hola),
+    url(r'^datetime/$', Datetime),
 ]
