@@ -114,7 +114,6 @@ def get_message(m):
         #print (id_syrus)
 
         # Time
-        #secn, Year, Month, Day, Hour, Minutes, Seconds = getTime(int(m[6:10]), int(m[10]), int(m[11:16]))
         ts_epoch = get_seconds(int(m[6:10]), int(m[10]), int(m[11:16]))
         my_datetime = datetime.datetime.fromtimestamp(ts_epoch).strftime('%Y-%m-%d %H:%M:%S')
 
