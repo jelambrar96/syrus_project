@@ -91,11 +91,6 @@ def ethernet_frame(data):
 
 #.................................................................
 
-#def print_frame():
-
-
-#.................................................................
-
 #unpacks IPV4 packets
 def ipv4_packet(data):
     version_header_lenght = data[0]
