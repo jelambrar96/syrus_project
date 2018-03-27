@@ -101,8 +101,6 @@ def upd_segment(data):
 
 def get_message(m):
     if m[0:4] == ">REV":
-        #print("Mensaje recibido: " + m )
-        #print("Procesando...")
         # Confirmation
         itIs = 1
         # Event
