@@ -190,5 +190,5 @@ def db(latitude, longitude, id_syrus, datetime, velocity):
         #print("ok Db")
         pass
 #.....................................................................
-# this is the main function 
+# this is the main function
 main()
