@@ -9,4 +9,5 @@ class Position_data(models.Model):
     id_syrus = models.CharField(max_length = 16, default = '')
 
     def __str__(self):
-        return '%s %s' %('Position', str(self.id))
+        #return '%s %s' %('Position', str(self.id))
+        return 'Position'
