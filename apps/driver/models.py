@@ -12,11 +12,5 @@ class Driver(models.Model):
     driver_ciu = models.IntegerField()
     drive_tel = models.CharField(max_length = 16, default = '')
 
-"""
-class Position_data(models.Model):
-    latitude = models.FloatField()
-    longitude = models.FloatField()
-    datetime = models.DateTimeField()
-    velocity = models.FloatField(default = 0)
-    id_syrus = models.CharField(max_length = 16, default = '')
-"""
+    def __str__(self): 
+        return '%s %s' %(self.driver_name, self.driver_lastname)

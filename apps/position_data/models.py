@@ -8,3 +8,5 @@ class Position_data(models.Model):
     velocity = models.FloatField(default = 0)
     id_syrus = models.CharField(max_length = 16, default = '')
 
+    def __str__(self):
+        return '%s %s' %('Position', str(self.id))
