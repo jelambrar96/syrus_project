@@ -11,6 +11,7 @@ class Driver(models.Model):
     driver_email = models.EmailField()
     driver_ciu = models.IntegerField()
     drive_tel = models.CharField(max_length = 16, default = '')
+    driver_password = models.CharField(max_length = 48)
 
     def __str__(self): 
         return '%s %s' %(self.driver_name, self.driver_lastname)

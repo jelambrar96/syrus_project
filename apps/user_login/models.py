@@ -5,10 +5,12 @@ from django.db import models
 
 # Create your models here.
 class User(models.Model):
-    user_name = models.CharField(max_length = 24, default = '')
-    user_lastname = models.CharField(max_length = 24, default = '')
-    user_email = models.EmailField()
-    drive_tel = models.CharField(max_length = 16, default = '')
+    user_username = models.CharField(max_length = 12, blank = False)
+    user_name = models.CharField(max_length = 24, blank = False)
+    user_lastname = models.CharField(max_length = 24, blank = False)
+    user_email = models.EmailField(blank = False)
+    user_tel = models.CharField(max_length = 16, default = '')
+    user_password = models.CharField(max_length = 48)
 
     def __str__(self):
         return self.user_name
