@@ -5,5 +5,8 @@ from django.contrib import admin
 from apps.user_login.models import User
 
 # Register your models here.
-admin.site.register(User)
+class UserAdmin(admin.ModelAdmin):
+    pass 
+
+admin.site.register(User, UserAdmin)
 
