@@ -1,5 +1,5 @@
 from django.http import HttpResponse
 
-def hola(request):
+def Hola(request):
     return HttpResponse("HolaMundo")
-     
+
