@@ -130,5 +130,5 @@ STATIC_URL = '/static/'
 #change static folter
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    #'/var/www/syrus_project/static/',
+    '/var/www/syrus_project/static/',
 ]
