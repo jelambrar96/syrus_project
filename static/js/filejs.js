@@ -1,3 +1,3 @@
-windo.addEventListernet("load", function(){
+window.addEventListernet("load", function(){
 
 }, false)
