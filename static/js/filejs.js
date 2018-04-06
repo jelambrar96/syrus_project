@@ -1,5 +1,5 @@
 //filejs.js
 
-window.addEventListernet("load", function(){
+window.addEventListener("load", function(){
 
 }, false)
