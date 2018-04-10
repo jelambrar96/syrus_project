@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
-from syrus_project.views import Hola, Datetime, Hours_before
+from syrus_project.views import Hola, Datetime, Hours_before, Base
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^hola/$', Hola),
     url(r'^datetime/$', Datetime),
-    url(r'^datetime/more/(\d{1,2})$', Hours_before)
+    url(r'^datetime/more/(\d{1,2})$', Hours_before),
+    url(r'^base/$', Base)
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
